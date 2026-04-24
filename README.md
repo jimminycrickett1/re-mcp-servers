@@ -40,3 +40,14 @@ pytest
 Tests help ensure your implementations behave deterministically and return
 the expected fields. Hermes/Overstory will use these tests as part of
 its iterative development loop.
+
+## Running the MCP-bytes server
+
+Install dependencies and run via uvicorn:
+
+```
+pip install fastapi fastmcp uvicorn
+uvicorn servers.mcp_bytes.mcp_bytes_server:app --reload
+```
+
+This exposes `/read_bytes` and `/search_bytes` endpoints.
